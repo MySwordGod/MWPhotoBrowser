@@ -143,7 +143,7 @@
 			// Setup photo frame
 			CGRect photoImageViewFrame;
 			photoImageViewFrame.origin = CGPointZero;
-			photoImageViewFrame.size = CGSizeMake(438.0/2.0, 550.0/2.0);
+			photoImageViewFrame.size = img.size;
 			_photoImageView.frame = photoImageViewFrame;
 			self.contentSize = photoImageViewFrame.size;
 
@@ -223,7 +223,7 @@
     if (_photoImageView && _photoBrowser.zoomPhotosToFill) {
         // Zoom image to fill if the aspect ratios are fairly similar
         CGSize boundsSize = self.bounds.size;
-        CGSize imageSize = CGSizeMake(438.0/2.0, 550.0/2.0);
+        CGSize imageSize = _photoImageView.image.size;
         CGFloat boundsAR = boundsSize.width / boundsSize.height;
         CGFloat imageAR = imageSize.width / imageSize.height;
         CGFloat xScale = boundsSize.width / imageSize.width;    // the scale needed to perfectly fit the image width-wise
@@ -253,7 +253,7 @@
 	
     // Sizes
     CGSize boundsSize = self.bounds.size;
-    CGSize imageSize = CGSizeMake(438.0/2.0, 550.0/2.0);
+    CGSize imageSize = _photoImageView.image.size;
     
     // Calculate Min
     CGFloat xScale = boundsSize.width / imageSize.width;    // the scale needed to perfectly fit the image width-wise
