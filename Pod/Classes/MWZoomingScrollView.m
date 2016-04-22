@@ -143,7 +143,7 @@
 			// Setup photo frame
 			CGRect photoImageViewFrame;
 			photoImageViewFrame.origin = CGPointZero;
-			photoImageViewFrame.size = CGSizeMake(438.0/2.0, 550.0/2.0);
+			photoImageViewFrame.size = CGSizeMake(438.0, 550.0);
 			_photoImageView.frame = photoImageViewFrame;
 			self.contentSize = photoImageViewFrame.size;
 
